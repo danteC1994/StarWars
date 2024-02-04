@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct PeopleEndpoint: StarWarsEndpoint {
+    var endpointPath = "/people"
+    let queryItems = [URLQueryItem]()
+}

@@ -42,8 +42,3 @@ extension StarWarsEndpoint {
         return endpointUrlComponents.url
     }
 }
-
-struct peopleEndpoint: StarWarsEndpoint {
-    var endpointPath = "/people"
-    let queryItems: [URLQueryItem]
-}

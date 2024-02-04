@@ -14,6 +14,13 @@
 		81AC3AA22B6D8375008D77C1 /* StarWarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AA12B6D8375008D77C1 /* StarWarsTests.swift */; };
 		81AC3AAC2B6D8375008D77C1 /* StarWarsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AAB2B6D8375008D77C1 /* StarWarsUITests.swift */; };
 		81AC3AAE2B6D8375008D77C1 /* StarWarsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AAD2B6D8375008D77C1 /* StarWarsUITestsLaunchTests.swift */; };
+		81AC3ABE2B6D84AB008D77C1 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3ABD2B6D84AB008D77C1 /* APIError.swift */; };
+		81AC3AC02B6D8549008D77C1 /* StarWarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3ABF2B6D8549008D77C1 /* StarWarsAPI.swift */; };
+		81AC3AC52B6D887B008D77C1 /* PeopleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AC42B6D887B008D77C1 /* PeopleEndpoint.swift */; };
+		81AC3AC92B6D88FE008D77C1 /* PeopleFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AC82B6D88FE008D77C1 /* PeopleFetchable.swift */; };
+		81AC3ACC2B6D8C40008D77C1 /* PeopleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3ACB2B6D8C40008D77C1 /* PeopleRepository.swift */; };
+		81AC3AD02B6EE3A6008D77C1 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3ACF2B6EE3A6008D77C1 /* People.swift */; };
+		81AC3AD22B6EE66D008D77C1 /* PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AD12B6EE66D008D77C1 /* PeopleService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,13 @@
 		81AC3AA72B6D8375008D77C1 /* StarWarsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarWarsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AC3AAB2B6D8375008D77C1 /* StarWarsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsUITests.swift; sourceTree = "<group>"; };
 		81AC3AAD2B6D8375008D77C1 /* StarWarsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		81AC3ABD2B6D84AB008D77C1 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		81AC3ABF2B6D8549008D77C1 /* StarWarsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAPI.swift; sourceTree = "<group>"; };
+		81AC3AC42B6D887B008D77C1 /* PeopleEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleEndpoint.swift; sourceTree = "<group>"; };
+		81AC3AC82B6D88FE008D77C1 /* PeopleFetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFetchable.swift; sourceTree = "<group>"; };
+		81AC3ACB2B6D8C40008D77C1 /* PeopleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRepository.swift; sourceTree = "<group>"; };
+		81AC3ACF2B6EE3A6008D77C1 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		81AC3AD12B6EE66D008D77C1 /* PeopleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +108,11 @@
 		81AC3A8F2B6D8371008D77C1 /* StarWars */ = {
 			isa = PBXGroup;
 			children = (
-				81AC3A902B6D8371008D77C1 /* StarWarsApp.swift */,
-				81AC3A922B6D8371008D77C1 /* ContentView.swift */,
-				81AC3A942B6D8375008D77C1 /* Assets.xcassets */,
-				81AC3A962B6D8375008D77C1 /* Preview Content */,
+				81AC3ACD2B6EE33D008D77C1 /* Models */,
+				81AC3AC12B6D882A008D77C1 /* Features */,
+				81AC3ABA2B6D840C008D77C1 /* App */,
+				81AC3ABC2B6D8491008D77C1 /* Network */,
+				81AC3ABB2B6D841B008D77C1 /* Assets */,
 			);
 			path = StarWars;
 			sourceTree = "<group>";
@@ -125,6 +140,100 @@
 				81AC3AAD2B6D8375008D77C1 /* StarWarsUITestsLaunchTests.swift */,
 			);
 			path = StarWarsUITests;
+			sourceTree = "<group>";
+		};
+		81AC3ABA2B6D840C008D77C1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3A902B6D8371008D77C1 /* StarWarsApp.swift */,
+				81AC3A922B6D8371008D77C1 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		81AC3ABB2B6D841B008D77C1 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3A962B6D8375008D77C1 /* Preview Content */,
+				81AC3A942B6D8375008D77C1 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		81AC3ABC2B6D8491008D77C1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3AC62B6D88C1008D77C1 /* Services */,
+				81AC3AC32B6D8860008D77C1 /* Endpoints */,
+				81AC3AC22B6D8856008D77C1 /* API */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		81AC3AC12B6D882A008D77C1 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		81AC3AC22B6D8856008D77C1 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3ABD2B6D84AB008D77C1 /* APIError.swift */,
+				81AC3ABF2B6D8549008D77C1 /* StarWarsAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		81AC3AC32B6D8860008D77C1 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3AC42B6D887B008D77C1 /* PeopleEndpoint.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		81AC3AC62B6D88C1008D77C1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3ACA2B6D8C27008D77C1 /* Repositories */,
+				81AC3AC72B6D88DE008D77C1 /* PeopleService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		81AC3AC72B6D88DE008D77C1 /* PeopleService */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3AC82B6D88FE008D77C1 /* PeopleFetchable.swift */,
+				81AC3AD12B6EE66D008D77C1 /* PeopleService.swift */,
+			);
+			path = PeopleService;
+			sourceTree = "<group>";
+		};
+		81AC3ACA2B6D8C27008D77C1 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3ACB2B6D8C40008D77C1 /* PeopleRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		81AC3ACD2B6EE33D008D77C1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3ACE2B6EE342008D77C1 /* People */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		81AC3ACE2B6EE342008D77C1 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3ACF2B6EE3A6008D77C1 /* People.swift */,
+			);
+			path = People;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +367,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AC3A932B6D8371008D77C1 /* ContentView.swift in Sources */,
+				81AC3AC02B6D8549008D77C1 /* StarWarsAPI.swift in Sources */,
 				81AC3A912B6D8371008D77C1 /* StarWarsApp.swift in Sources */,
+				81AC3AC92B6D88FE008D77C1 /* PeopleFetchable.swift in Sources */,
+				81AC3AD02B6EE3A6008D77C1 /* People.swift in Sources */,
+				81AC3ACC2B6D8C40008D77C1 /* PeopleRepository.swift in Sources */,
+				81AC3ABE2B6D84AB008D77C1 /* APIError.swift in Sources */,
+				81AC3AC52B6D887B008D77C1 /* PeopleEndpoint.swift in Sources */,
+				81AC3AD22B6EE66D008D77C1 /* PeopleService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +532,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"StarWars/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"StarWars/Assets/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -444,7 +560,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"StarWars/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"StarWars/Assets/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

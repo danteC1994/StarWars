@@ -6,3 +6,24 @@
 //
 
 import Foundation
+
+struct PeopleService: PeopleFetchable {
+    func requestPeople() async -> Result<People, APIError> {
+        guard let url = PeopleEndpoint().getUrlRequest()
+        else {
+            return .failure(.url("Could not create url"))
+        }
+        let peopleData: Data
+        do {
+            (peopleData, _) = try await URLSession.shared.data(from: url)
+        } catch {
+            return .failure(APIError.network("\(error)"))
+        }
+        do {
+            let people = try JSONDecoder().decode(People.self, from: peopleData)
+            return .success(people)
+        } catch {
+            return .failure(APIError.decoding("\(error)"))
+        }
+    }
+}
