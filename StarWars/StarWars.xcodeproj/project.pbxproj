@@ -21,6 +21,9 @@
 		81AC3ACC2B6D8C40008D77C1 /* PeopleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3ACB2B6D8C40008D77C1 /* PeopleRepository.swift */; };
 		81AC3AD02B6EE3A6008D77C1 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3ACF2B6EE3A6008D77C1 /* People.swift */; };
 		81AC3AD22B6EE66D008D77C1 /* PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AD12B6EE66D008D77C1 /* PeopleService.swift */; };
+		81AC3AD82B70555C008D77C1 /* PeopleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AD72B70555C008D77C1 /* PeopleListViewModel.swift */; };
+		81AC3ADA2B705571008D77C1 /* PeopleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AD92B705571008D77C1 /* PeopleListView.swift */; };
+		81AC3ADC2B705581008D77C1 /* PeopleListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3ADB2B705581008D77C1 /* PeopleListFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,9 @@
 		81AC3ACB2B6D8C40008D77C1 /* PeopleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRepository.swift; sourceTree = "<group>"; };
 		81AC3ACF2B6EE3A6008D77C1 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		81AC3AD12B6EE66D008D77C1 /* PeopleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleService.swift; sourceTree = "<group>"; };
+		81AC3AD72B70555C008D77C1 /* PeopleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListViewModel.swift; sourceTree = "<group>"; };
+		81AC3AD92B705571008D77C1 /* PeopleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListView.swift; sourceTree = "<group>"; };
+		81AC3ADB2B705581008D77C1 /* PeopleListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,10 +114,10 @@
 		81AC3A8F2B6D8371008D77C1 /* StarWars */ = {
 			isa = PBXGroup;
 			children = (
-				81AC3ACD2B6EE33D008D77C1 /* Models */,
-				81AC3AC12B6D882A008D77C1 /* Features */,
 				81AC3ABA2B6D840C008D77C1 /* App */,
+				81AC3AC12B6D882A008D77C1 /* Features */,
 				81AC3ABC2B6D8491008D77C1 /* Network */,
+				81AC3ACD2B6EE33D008D77C1 /* Models */,
 				81AC3ABB2B6D841B008D77C1 /* Assets */,
 			);
 			path = StarWars;
@@ -173,6 +179,7 @@
 		81AC3AC12B6D882A008D77C1 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				81AC3AD32B705519008D77C1 /* People */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -234,6 +241,40 @@
 				81AC3ACF2B6EE3A6008D77C1 /* People.swift */,
 			);
 			path = People;
+			sourceTree = "<group>";
+		};
+		81AC3AD32B705519008D77C1 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3AD62B70553C008D77C1 /* PeopleListViewModel */,
+				81AC3AD52B705532008D77C1 /* PeopleListView */,
+				81AC3AD42B70552A008D77C1 /* PeopleFactory */,
+			);
+			path = People;
+			sourceTree = "<group>";
+		};
+		81AC3AD42B70552A008D77C1 /* PeopleFactory */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3ADB2B705581008D77C1 /* PeopleListFactory.swift */,
+			);
+			path = PeopleFactory;
+			sourceTree = "<group>";
+		};
+		81AC3AD52B705532008D77C1 /* PeopleListView */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3AD92B705571008D77C1 /* PeopleListView.swift */,
+			);
+			path = PeopleListView;
+			sourceTree = "<group>";
+		};
+		81AC3AD62B70553C008D77C1 /* PeopleListViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3AD72B70555C008D77C1 /* PeopleListViewModel.swift */,
+			);
+			path = PeopleListViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,11 +409,14 @@
 			files = (
 				81AC3A932B6D8371008D77C1 /* ContentView.swift in Sources */,
 				81AC3AC02B6D8549008D77C1 /* StarWarsAPI.swift in Sources */,
+				81AC3ADA2B705571008D77C1 /* PeopleListView.swift in Sources */,
 				81AC3A912B6D8371008D77C1 /* StarWarsApp.swift in Sources */,
 				81AC3AC92B6D88FE008D77C1 /* PeopleFetchable.swift in Sources */,
 				81AC3AD02B6EE3A6008D77C1 /* People.swift in Sources */,
 				81AC3ACC2B6D8C40008D77C1 /* PeopleRepository.swift in Sources */,
+				81AC3ADC2B705581008D77C1 /* PeopleListFactory.swift in Sources */,
 				81AC3ABE2B6D84AB008D77C1 /* APIError.swift in Sources */,
+				81AC3AD82B70555C008D77C1 /* PeopleListViewModel.swift in Sources */,
 				81AC3AC52B6D887B008D77C1 /* PeopleEndpoint.swift in Sources */,
 				81AC3AD22B6EE66D008D77C1 /* PeopleService.swift in Sources */,
 			);
