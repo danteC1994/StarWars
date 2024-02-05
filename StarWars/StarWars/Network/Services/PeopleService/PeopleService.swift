@@ -8,8 +8,8 @@
 import Foundation
 
 struct PeopleService: PeopleFetchable {
-    func requestPeople() async -> Result<PeopleList, APIError> {
-        guard let url = PeopleEndpoint().getUrlRequest()
+    func requestPeople(request: PeopleRequest) async -> Result<PeopleList, APIError> {
+        guard let url = PeopleEndpoint(queryItems: request.queryItems()).getUrlRequest()
         else {
             return .failure(.url("Could not create url"))
         }

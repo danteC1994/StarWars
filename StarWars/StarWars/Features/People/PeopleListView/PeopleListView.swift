@@ -12,24 +12,36 @@ struct PeopleListView: View {
 
     var body: some View {
         NavigationView {
-            if viewModel.isPeopleLoading {
-                ProgressView()
-            } else {
                 ZStack {
-                    Color.black
+                    Color.secondary
                         .ignoresSafeArea()
-                    List {
-                        ForEach(viewModel.peopleList.results) { people in
-                            PeopleListRow(people: people)
+                    if viewModel.isPeopleLoading {
+                        ProgressView()
+                    } else {
+                        ScrollView {
+                            LazyVStack {
+                                ForEach(viewModel.people) { people in
+                                    PeopleListRow(people: people)
+                                        .onAppear {
+                                            if people == viewModel.people.last {
+                                                Task {
+                                                    await viewModel.getPeople()
+                                                }
+                                            }
+                                        }
+                                }
+                            }
                         }
                     }
-                }
             }
         }
         .onAppear {
             Task {
                 await viewModel.getPeople()
             }
+        }
+        .refreshable {
+            await viewModel.getPeople()
         }
     }
 }

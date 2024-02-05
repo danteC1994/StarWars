@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct People: Decodable, Identifiable {
+struct People: Decodable, Identifiable, Equatable {
     var id: UUID {
         return UUID()
     }

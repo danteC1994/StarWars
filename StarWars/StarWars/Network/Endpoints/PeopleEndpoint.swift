@@ -9,5 +9,9 @@ import Foundation
 
 struct PeopleEndpoint: StarWarsEndpoint {
     var endpointPath = "/people"
-    let queryItems = [URLQueryItem]()
+    let queryItems: [URLQueryItem]
+
+    init(queryItems: [URLQueryItem] = []) {
+        self.queryItems = queryItems
+    }
 }

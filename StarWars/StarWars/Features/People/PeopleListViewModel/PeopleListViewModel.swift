@@ -8,7 +8,7 @@
 import Combine
 
 class PeopleListViewModel: ObservableObject {
-    @Published var peopleList = PeopleList(count: 0, next: "", previous: "", results: [])
+    @Published var people = [People]()
     @Published var isPeopleLoading = false
     let peopleRepository: PeopleRepository
 
@@ -19,10 +19,11 @@ class PeopleListViewModel: ObservableObject {
     @MainActor
     func getPeople() async {
         isPeopleLoading = true
-        let result = await peopleRepository.requestPeople()
+        defer { isPeopleLoading = false }
+        let result = people.count == 0 ? await peopleRepository.requestPeople() : await peopleRepository.requestPeopleNextPage()
         switch result {
-        case let .success(people):
-            peopleList = people
+        case let .success(peopleList):
+            people += peopleList.results
         case let .failure(error):
             switch error {
             case .url(_):
@@ -33,6 +34,5 @@ class PeopleListViewModel: ObservableObject {
                 break
             }
         }
-        isPeopleLoading = false
     }
 }
