@@ -26,6 +26,8 @@
 		81AC3ADC2B705581008D77C1 /* PeopleListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3ADB2B705581008D77C1 /* PeopleListFactory.swift */; };
 		81AC3ADE2B705E63008D77C1 /* PeopleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3ADD2B705E63008D77C1 /* PeopleList.swift */; };
 		81AC3AE02B706D60008D77C1 /* PeopleListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3ADF2B706D60008D77C1 /* PeopleListRow.swift */; };
+		81AC3AE52B71A784008D77C1 /* PeopleModelMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AE42B71A784008D77C1 /* PeopleModelMocks.swift */; };
+		81AC3AE82B71A869008D77C1 /* PeopleServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AE72B71A869008D77C1 /* PeopleServiceMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		81AC3ADB2B705581008D77C1 /* PeopleListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListFactory.swift; sourceTree = "<group>"; };
 		81AC3ADD2B705E63008D77C1 /* PeopleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleList.swift; sourceTree = "<group>"; };
 		81AC3ADF2B706D60008D77C1 /* PeopleListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListRow.swift; sourceTree = "<group>"; };
+		81AC3AE42B71A784008D77C1 /* PeopleModelMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleModelMocks.swift; sourceTree = "<group>"; };
+		81AC3AE72B71A869008D77C1 /* PeopleServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleServiceMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,7 @@
 		81AC3A8F2B6D8371008D77C1 /* StarWars */ = {
 			isa = PBXGroup;
 			children = (
+				81AC3AE12B71A75C008D77C1 /* Mocks */,
 				81AC3ABA2B6D840C008D77C1 /* App */,
 				81AC3AC12B6D882A008D77C1 /* Features */,
 				81AC3ABC2B6D8491008D77C1 /* Network */,
@@ -283,6 +288,39 @@
 			path = PeopleListViewModel;
 			sourceTree = "<group>";
 		};
+		81AC3AE12B71A75C008D77C1 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3AE22B71A765008D77C1 /* People */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		81AC3AE22B71A765008D77C1 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3AE62B71A852008D77C1 /* Service */,
+				81AC3AE32B71A772008D77C1 /* Models */,
+			);
+			path = People;
+			sourceTree = "<group>";
+		};
+		81AC3AE32B71A772008D77C1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3AE42B71A784008D77C1 /* PeopleModelMocks.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		81AC3AE62B71A852008D77C1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3AE72B71A869008D77C1 /* PeopleServiceMock.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -415,12 +453,14 @@
 			files = (
 				81AC3A932B6D8371008D77C1 /* ContentView.swift in Sources */,
 				81AC3AC02B6D8549008D77C1 /* StarWarsAPI.swift in Sources */,
+				81AC3AE82B71A869008D77C1 /* PeopleServiceMock.swift in Sources */,
 				81AC3ADA2B705571008D77C1 /* PeopleListView.swift in Sources */,
 				81AC3A912B6D8371008D77C1 /* StarWarsApp.swift in Sources */,
 				81AC3AC92B6D88FE008D77C1 /* PeopleFetchable.swift in Sources */,
 				81AC3AD02B6EE3A6008D77C1 /* People.swift in Sources */,
 				81AC3ACC2B6D8C40008D77C1 /* PeopleRepository.swift in Sources */,
 				81AC3ADE2B705E63008D77C1 /* PeopleList.swift in Sources */,
+				81AC3AE52B71A784008D77C1 /* PeopleModelMocks.swift in Sources */,
 				81AC3ADC2B705581008D77C1 /* PeopleListFactory.swift in Sources */,
 				81AC3AE02B706D60008D77C1 /* PeopleListRow.swift in Sources */,
 				81AC3ABE2B6D84AB008D77C1 /* APIError.swift in Sources */,
