@@ -9,7 +9,9 @@ import Foundation
 
 struct PeopleListFactory {
     static func createPeopleList() -> PeopleListView {
-        let viewModel = PeopleListViewModel()
+        let peopleService = PeopleService()
+        let peopleRepository = PeopleRepository(peopleService: peopleService)
+        let viewModel = PeopleListViewModel(peopleRepository: peopleRepository)
         return PeopleListView(viewModel: viewModel)
     }
 }

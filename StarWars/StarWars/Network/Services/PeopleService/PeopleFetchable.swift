@@ -8,5 +8,5 @@
 import Combine
 
 protocol PeopleFetchable {
-    func requestPeople() async -> Result<People, APIError>
+    func requestPeople() async -> Result<PeopleList, APIError>
 }

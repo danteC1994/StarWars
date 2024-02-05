@@ -15,21 +15,8 @@ struct PeopleRepository {
         self.peopleService = peopleService
     }
 
-    func requestPeople() async -> People? {
+    func requestPeople() async -> Result<PeopleList, APIError> {
         let result = await peopleService.requestPeople()
-        switch result {
-        case let .success(people):
-            return people
-        case let .failure(error):
-            switch error {
-            case .url(_):
-                break
-            case .network(_):
-                break
-            case .decoding(_):
-                break
-            }
-            return nil
-        }
+        return result
     }
 }

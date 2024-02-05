@@ -8,7 +8,7 @@
 import Foundation
 
 struct PeopleService: PeopleFetchable {
-    func requestPeople() async -> Result<People, APIError> {
+    func requestPeople() async -> Result<PeopleList, APIError> {
         guard let url = PeopleEndpoint().getUrlRequest()
         else {
             return .failure(.url("Could not create url"))
@@ -20,7 +20,7 @@ struct PeopleService: PeopleFetchable {
             return .failure(APIError.network("\(error)"))
         }
         do {
-            let people = try JSONDecoder().decode(People.self, from: peopleData)
+            let people = try JSONDecoder().decode(PeopleList.self, from: peopleData)
             return .success(people)
         } catch {
             return .failure(APIError.decoding("\(error)"))
