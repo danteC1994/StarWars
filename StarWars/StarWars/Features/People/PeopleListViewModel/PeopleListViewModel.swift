@@ -9,13 +9,16 @@ import Combine
 
 class PeopleListViewModel: ObservableObject {
     @Published var peopleList = PeopleList(count: 0, next: "", previous: "", results: [])
+    @Published var isPeopleLoading = false
     let peopleRepository: PeopleRepository
 
     init(peopleRepository: PeopleRepository) {
         self.peopleRepository = peopleRepository
     }
 
+    @MainActor
     func getPeople() async {
+        isPeopleLoading = true
         let result = await peopleRepository.requestPeople()
         switch result {
         case let .success(people):
@@ -30,5 +33,6 @@ class PeopleListViewModel: ObservableObject {
                 break
             }
         }
+        isPeopleLoading = false
     }
 }

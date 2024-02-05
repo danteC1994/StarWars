@@ -11,11 +11,26 @@ struct PeopleListView: View {
     @ObservedObject var viewModel: PeopleListViewModel
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            .task {
+        NavigationView {
+            if viewModel.isPeopleLoading {
+                ProgressView()
+            } else {
+                ZStack {
+                    Color.black
+                        .ignoresSafeArea()
+                    List {
+                        ForEach(viewModel.peopleList.results) { people in
+                            PeopleListRow(people: people)
+                        }
+                    }
+                }
+            }
+        }
+        .onAppear {
+            Task {
                 await viewModel.getPeople()
             }
-//            .onAppear{ viewModel.getPeople() }
+        }
     }
 }
 

@@ -25,6 +25,7 @@
 		81AC3ADA2B705571008D77C1 /* PeopleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AD92B705571008D77C1 /* PeopleListView.swift */; };
 		81AC3ADC2B705581008D77C1 /* PeopleListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3ADB2B705581008D77C1 /* PeopleListFactory.swift */; };
 		81AC3ADE2B705E63008D77C1 /* PeopleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3ADD2B705E63008D77C1 /* PeopleList.swift */; };
+		81AC3AE02B706D60008D77C1 /* PeopleListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3ADF2B706D60008D77C1 /* PeopleListRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		81AC3AD92B705571008D77C1 /* PeopleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListView.swift; sourceTree = "<group>"; };
 		81AC3ADB2B705581008D77C1 /* PeopleListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListFactory.swift; sourceTree = "<group>"; };
 		81AC3ADD2B705E63008D77C1 /* PeopleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleList.swift; sourceTree = "<group>"; };
+		81AC3ADF2B706D60008D77C1 /* PeopleListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				81AC3AD92B705571008D77C1 /* PeopleListView.swift */,
+				81AC3ADF2B706D60008D77C1 /* PeopleListRow.swift */,
 			);
 			path = PeopleListView;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				81AC3ACC2B6D8C40008D77C1 /* PeopleRepository.swift in Sources */,
 				81AC3ADE2B705E63008D77C1 /* PeopleList.swift in Sources */,
 				81AC3ADC2B705581008D77C1 /* PeopleListFactory.swift in Sources */,
+				81AC3AE02B706D60008D77C1 /* PeopleListRow.swift in Sources */,
 				81AC3ABE2B6D84AB008D77C1 /* APIError.swift in Sources */,
 				81AC3AD82B70555C008D77C1 /* PeopleListViewModel.swift in Sources */,
 				81AC3AC52B6D887B008D77C1 /* PeopleEndpoint.swift in Sources */,

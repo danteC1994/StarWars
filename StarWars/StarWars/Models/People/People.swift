@@ -7,7 +7,10 @@
 
 import Foundation
 
-struct People: Decodable {
+struct People: Decodable, Identifiable {
+    var id: UUID {
+        return UUID()
+    }
     let birthYear: String?
     let eyeColor: String?
     let films: [String]
@@ -19,7 +22,7 @@ struct People: Decodable {
     let name: String
     let skinColor: String?
     let created: String
-    let edited: String
+    let edited: String?
     let species: [String]
     let starships: [String]
     let url: String
