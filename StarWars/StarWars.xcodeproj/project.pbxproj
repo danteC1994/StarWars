@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		81AC3A912B6D8371008D77C1 /* StarWarsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3A902B6D8371008D77C1 /* StarWarsApp.swift */; };
-		81AC3A932B6D8371008D77C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3A922B6D8371008D77C1 /* ContentView.swift */; };
 		81AC3A952B6D8375008D77C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81AC3A942B6D8375008D77C1 /* Assets.xcassets */; };
 		81AC3A982B6D8375008D77C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81AC3A972B6D8375008D77C1 /* Preview Assets.xcassets */; };
 		81AC3AAC2B6D8375008D77C1 /* StarWarsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AAB2B6D8375008D77C1 /* StarWarsUITests.swift */; };
@@ -75,7 +74,6 @@
 /* Begin PBXFileReference section */
 		81AC3A8D2B6D8371008D77C1 /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AC3A902B6D8371008D77C1 /* StarWarsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsApp.swift; sourceTree = "<group>"; };
-		81AC3A922B6D8371008D77C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		81AC3A942B6D8375008D77C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81AC3A972B6D8375008D77C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		81AC3A9D2B6D8375008D77C1 /* StarWarsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarWarsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,7 +212,6 @@
 			isa = PBXGroup;
 			children = (
 				81AC3A902B6D8371008D77C1 /* StarWarsApp.swift */,
-				81AC3A922B6D8371008D77C1 /* ContentView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -727,7 +724,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AC3B122B71F700008D77C1 /* StarshipEndpoint.swift in Sources */,
-				81AC3A932B6D8371008D77C1 /* ContentView.swift in Sources */,
 				81AC3B182B71F813008D77C1 /* StarshipFetchable.swift in Sources */,
 				81AC3AC02B6D8549008D77C1 /* StarWarsAPI.swift in Sources */,
 				81AC3AE82B71A869008D77C1 /* PeopleServiceMock.swift in Sources */,
