@@ -61,6 +61,6 @@ struct PeopleListView: View {
 
 struct PeopleListView_Previews: PreviewProvider {
     static var previews: some View {
-        PeopleFactory.createPeopleList()
+        PeopleFactory.createPeopleListMock()
     }
 }
