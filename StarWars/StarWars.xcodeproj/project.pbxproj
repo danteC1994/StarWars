@@ -39,6 +39,14 @@
 		81AC3B052B71DE25008D77C1 /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3B042B71DE25008D77C1 /* URLSession+Extensions.swift */; };
 		81AC3B0C2B71E1D1008D77C1 /* PeopleDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3B0B2B71E1D1008D77C1 /* PeopleDetailsView.swift */; };
 		81AC3B0E2B71E1DB008D77C1 /* PeopleDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3B0D2B71E1DB008D77C1 /* PeopleDetailsViewModel.swift */; };
+		81AC3B122B71F700008D77C1 /* StarshipEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3B112B71F700008D77C1 /* StarshipEndpoint.swift */; };
+		81AC3B152B71F772008D77C1 /* StarshipRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3B142B71F772008D77C1 /* StarshipRequest.swift */; };
+		81AC3B182B71F813008D77C1 /* StarshipFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3B172B71F813008D77C1 /* StarshipFetchable.swift */; };
+		81AC3B1B2B71F845008D77C1 /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3B1A2B71F845008D77C1 /* Starship.swift */; };
+		81AC3B1D2B71F87D008D77C1 /* StarshipList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3B1C2B71F87D008D77C1 /* StarshipList.swift */; };
+		81AC3B1F2B71FA87008D77C1 /* StarshipService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3B1E2B71FA87008D77C1 /* StarshipService.swift */; };
+		81AC3B222B71FAF8008D77C1 /* StarshipDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3B212B71FAF8008D77C1 /* StarshipDataManager.swift */; };
+		81AC3B242B71FB4B008D77C1 /* StarshipRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3B232B71FB4B008D77C1 /* StarshipRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +102,14 @@
 		81AC3B042B71DE25008D77C1 /* URLSession+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
 		81AC3B0B2B71E1D1008D77C1 /* PeopleDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailsView.swift; sourceTree = "<group>"; };
 		81AC3B0D2B71E1DB008D77C1 /* PeopleDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailsViewModel.swift; sourceTree = "<group>"; };
+		81AC3B112B71F700008D77C1 /* StarshipEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipEndpoint.swift; sourceTree = "<group>"; };
+		81AC3B142B71F772008D77C1 /* StarshipRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipRequest.swift; sourceTree = "<group>"; };
+		81AC3B172B71F813008D77C1 /* StarshipFetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipFetchable.swift; sourceTree = "<group>"; };
+		81AC3B1A2B71F845008D77C1 /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
+		81AC3B1C2B71F87D008D77C1 /* StarshipList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipList.swift; sourceTree = "<group>"; };
+		81AC3B1E2B71FA87008D77C1 /* StarshipService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipService.swift; sourceTree = "<group>"; };
+		81AC3B212B71FAF8008D77C1 /* StarshipDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipDataManager.swift; sourceTree = "<group>"; };
+		81AC3B232B71FB4B008D77C1 /* StarshipRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,8 +218,9 @@
 		81AC3ABC2B6D8491008D77C1 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				81AC3AC62B6D88C1008D77C1 /* Services */,
-				81AC3AC32B6D8860008D77C1 /* Endpoints */,
+				81AC3B0F2B71F6C6008D77C1 /* StarshipService */,
+				81AC3AC62B6D88C1008D77C1 /* PeopleServices */,
+				81AC3AFF2B71DD98008D77C1 /* Shared */,
 				81AC3AC22B6D8856008D77C1 /* API */,
 			);
 			path = Network;
@@ -234,24 +251,24 @@
 			path = Endpoints;
 			sourceTree = "<group>";
 		};
-		81AC3AC62B6D88C1008D77C1 /* Services */ = {
+		81AC3AC62B6D88C1008D77C1 /* PeopleServices */ = {
 			isa = PBXGroup;
 			children = (
-				81AC3AFF2B71DD98008D77C1 /* Shared */,
+				81AC3AC32B6D8860008D77C1 /* Endpoints */,
 				81AC3AED2B71AB52008D77C1 /* Requests */,
 				81AC3ACA2B6D8C27008D77C1 /* Repositories */,
-				81AC3AC72B6D88DE008D77C1 /* PeopleService */,
+				81AC3AC72B6D88DE008D77C1 /* Service */,
 			);
-			path = Services;
+			path = PeopleServices;
 			sourceTree = "<group>";
 		};
-		81AC3AC72B6D88DE008D77C1 /* PeopleService */ = {
+		81AC3AC72B6D88DE008D77C1 /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				81AC3AC82B6D88FE008D77C1 /* PeopleFetchable.swift */,
 				81AC3AD12B6EE66D008D77C1 /* PeopleService.swift */,
 			);
-			path = PeopleService;
+			path = Service;
 			sourceTree = "<group>";
 		};
 		81AC3ACA2B6D8C27008D77C1 /* Repositories */ = {
@@ -266,6 +283,7 @@
 		81AC3ACD2B6EE33D008D77C1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				81AC3B192B71F839008D77C1 /* Starship */,
 				81AC3ACE2B6EE342008D77C1 /* People */,
 			);
 			path = Models;
@@ -466,6 +484,60 @@
 			path = People;
 			sourceTree = "<group>";
 		};
+		81AC3B0F2B71F6C6008D77C1 /* StarshipService */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3B202B71FAE3008D77C1 /* Repositories */,
+				81AC3B162B71F7FC008D77C1 /* Services */,
+				81AC3B132B71F75E008D77C1 /* Requests */,
+				81AC3B102B71F6EC008D77C1 /* Endpoints */,
+			);
+			path = StarshipService;
+			sourceTree = "<group>";
+		};
+		81AC3B102B71F6EC008D77C1 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3B112B71F700008D77C1 /* StarshipEndpoint.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		81AC3B132B71F75E008D77C1 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3B142B71F772008D77C1 /* StarshipRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		81AC3B162B71F7FC008D77C1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3B172B71F813008D77C1 /* StarshipFetchable.swift */,
+				81AC3B1E2B71FA87008D77C1 /* StarshipService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		81AC3B192B71F839008D77C1 /* Starship */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3B1C2B71F87D008D77C1 /* StarshipList.swift */,
+				81AC3B1A2B71F845008D77C1 /* Starship.swift */,
+			);
+			path = Starship;
+			sourceTree = "<group>";
+		};
+		81AC3B202B71FAE3008D77C1 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3B212B71FAF8008D77C1 /* StarshipDataManager.swift */,
+				81AC3B232B71FB4B008D77C1 /* StarshipRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -596,13 +668,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81AC3B122B71F700008D77C1 /* StarshipEndpoint.swift in Sources */,
 				81AC3A932B6D8371008D77C1 /* ContentView.swift in Sources */,
+				81AC3B182B71F813008D77C1 /* StarshipFetchable.swift in Sources */,
 				81AC3AC02B6D8549008D77C1 /* StarWarsAPI.swift in Sources */,
 				81AC3AE82B71A869008D77C1 /* PeopleServiceMock.swift in Sources */,
 				81AC3ADA2B705571008D77C1 /* PeopleListView.swift in Sources */,
 				81AC3A912B6D8371008D77C1 /* StarWarsApp.swift in Sources */,
+				81AC3B242B71FB4B008D77C1 /* StarshipRepository.swift in Sources */,
+				81AC3B222B71FAF8008D77C1 /* StarshipDataManager.swift in Sources */,
 				81AC3B052B71DE25008D77C1 /* URLSession+Extensions.swift in Sources */,
 				81AC3AEF2B71AB61008D77C1 /* PeopleRequest.swift in Sources */,
+				81AC3B1B2B71F845008D77C1 /* Starship.swift in Sources */,
 				81AC3AC92B6D88FE008D77C1 /* PeopleFetchable.swift in Sources */,
 				81AC3B0C2B71E1D1008D77C1 /* PeopleDetailsView.swift in Sources */,
 				81AC3AD02B6EE3A6008D77C1 /* People.swift in Sources */,
@@ -612,6 +689,7 @@
 				81AC3B0E2B71E1DB008D77C1 /* PeopleDetailsViewModel.swift in Sources */,
 				81AC3ADC2B705581008D77C1 /* PeopleFactory.swift in Sources */,
 				81AC3AE02B706D60008D77C1 /* PeopleListRow.swift in Sources */,
+				81AC3B152B71F772008D77C1 /* StarshipRequest.swift in Sources */,
 				81AC3ABE2B6D84AB008D77C1 /* APIError.swift in Sources */,
 				81AC3B012B71DDA6008D77C1 /* GenericDecoder.swift in Sources */,
 				81AC3AD82B70555C008D77C1 /* PeopleListViewModel.swift in Sources */,
@@ -619,6 +697,8 @@
 				81AC3AF42B71CA73008D77C1 /* PeopleDataManager.swift in Sources */,
 				81AC3AD22B6EE66D008D77C1 /* PeopleService.swift in Sources */,
 				81AC3B032B71DDFC008D77C1 /* AsyncSession.swift in Sources */,
+				81AC3B1D2B71F87D008D77C1 /* StarshipList.swift in Sources */,
+				81AC3B1F2B71FA87008D77C1 /* StarshipService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
