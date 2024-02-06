@@ -11,7 +11,7 @@ struct PeopleListView: View {
     @ObservedObject var viewModel: PeopleListViewModel
 
     @State var navigate: Bool = false
-    @State var selectedPeople: People?
+    @State var selectedPeople: People = .init()
 
     var body: some View {
         NavigationStack {
@@ -25,7 +25,6 @@ struct PeopleListView: View {
                             LazyVStack {
                                 ForEach(viewModel.people) { people in
                                     PeopleListRow(people: people)
-//                                        .buttonStyle(.plain)
                                         .onTapGesture {
                                             selectedPeople = people
                                             navigate = true
@@ -46,7 +45,7 @@ struct PeopleListView: View {
                 .navigationDestination(
                      isPresented: $navigate
                 ) {
-                    PeopleFactory.createPeopleDetails()
+                    PeopleFactory.createPeopleDetails(people: selectedPeople)
                 }
         }
         .onAppear {

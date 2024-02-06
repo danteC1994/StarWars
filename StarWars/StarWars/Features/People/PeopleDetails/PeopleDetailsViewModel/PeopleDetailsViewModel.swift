@@ -8,5 +8,9 @@
 import Foundation
 
 class PeopleDetailsViewModel: ObservableObject {
-    
+    @Published var people: People
+
+    init(people: People) {
+        self.people = people
+    }
 }

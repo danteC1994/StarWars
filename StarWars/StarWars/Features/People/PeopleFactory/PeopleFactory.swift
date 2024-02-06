@@ -15,8 +15,8 @@ struct PeopleFactory {
         return PeopleListView(viewModel: viewModel)
     }
 
-    static func createPeopleDetails() -> PeopleDetailsView {
-        let viewModel = PeopleDetailsViewModel()
+    static func createPeopleDetails(people: People) -> PeopleDetailsView {
+        let viewModel = PeopleDetailsViewModel(people: people)
         return PeopleDetailsView(viewModel: viewModel)
     }
 }
