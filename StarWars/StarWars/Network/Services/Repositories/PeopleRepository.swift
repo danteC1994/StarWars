@@ -7,7 +7,7 @@
 
 import Foundation
 
-actor PeopleRepository {
+actor PeopleRepository: PeopleDataManager {
     private let peopleService: PeopleFetchable
 
     private(set) var page: String = ""

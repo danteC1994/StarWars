@@ -12,10 +12,6 @@ import XCTest
 class PeopleRepositoryTests: XCTestCase {
     var sut: PeopleRepository!
 
-    override func setUp() {
-//        sut = PeopleRepository(peopleService: PeopleServiceSuccessMock())
-    }
-
     func testRequestPeople() async {
         sut = PeopleRepository(peopleService: PeopleServiceSuccessMock())
 

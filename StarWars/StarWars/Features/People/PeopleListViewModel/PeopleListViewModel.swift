@@ -10,14 +10,15 @@ import Combine
 class PeopleListViewModel: ObservableObject {
     @Published var people = [People]()
     @Published var isPeopleLoading = false
-    let peopleRepository: PeopleRepository
+    let peopleRepository: PeopleDataManager
 
-    init(peopleRepository: PeopleRepository) {
+    init(peopleRepository: PeopleDataManager) {
         self.peopleRepository = peopleRepository
     }
 
     @MainActor
     func getPeople() async {
+        print("called!!!!!!!!!!")
         isPeopleLoading = true
         defer { isPeopleLoading = false }
         let result = people.count == 0 ? await peopleRepository.requestPeople() : await peopleRepository.requestPeopleNextPage()

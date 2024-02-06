@@ -11,7 +11,6 @@
 		81AC3A932B6D8371008D77C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3A922B6D8371008D77C1 /* ContentView.swift */; };
 		81AC3A952B6D8375008D77C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81AC3A942B6D8375008D77C1 /* Assets.xcassets */; };
 		81AC3A982B6D8375008D77C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81AC3A972B6D8375008D77C1 /* Preview Assets.xcassets */; };
-		81AC3AA22B6D8375008D77C1 /* StarWarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AA12B6D8375008D77C1 /* StarWarsTests.swift */; };
 		81AC3AAC2B6D8375008D77C1 /* StarWarsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AAB2B6D8375008D77C1 /* StarWarsUITests.swift */; };
 		81AC3AAE2B6D8375008D77C1 /* StarWarsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AAD2B6D8375008D77C1 /* StarWarsUITestsLaunchTests.swift */; };
 		81AC3ABE2B6D84AB008D77C1 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3ABD2B6D84AB008D77C1 /* APIError.swift */; };
@@ -31,6 +30,10 @@
 		81AC3AEC2B71A995008D77C1 /* PeopleRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AEB2B71A995008D77C1 /* PeopleRepositoryTests.swift */; };
 		81AC3AEF2B71AB61008D77C1 /* PeopleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AEE2B71AB61008D77C1 /* PeopleRequest.swift */; };
 		81AC3AF22B71C55B008D77C1 /* PeopleServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AF12B71C55B008D77C1 /* PeopleServiceTests.swift */; };
+		81AC3AF42B71CA73008D77C1 /* PeopleDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AF32B71CA73008D77C1 /* PeopleDataManager.swift */; };
+		81AC3AF82B71CB04008D77C1 /* PeopleViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AF72B71CB04008D77C1 /* PeopleViewModelTests.swift */; };
+		81AC3AFC2B71D3AD008D77C1 /* PeopleRepositoryMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AFB2B71D3AD008D77C1 /* PeopleRepositoryMocks.swift */; };
+		81AC3AFE2B71D3DE008D77C1 /* ServiceMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AFD2B71D3DE008D77C1 /* ServiceMocks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +60,6 @@
 		81AC3A942B6D8375008D77C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81AC3A972B6D8375008D77C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		81AC3A9D2B6D8375008D77C1 /* StarWarsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarWarsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		81AC3AA12B6D8375008D77C1 /* StarWarsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsTests.swift; sourceTree = "<group>"; };
 		81AC3AA72B6D8375008D77C1 /* StarWarsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarWarsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AC3AAB2B6D8375008D77C1 /* StarWarsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsUITests.swift; sourceTree = "<group>"; };
 		81AC3AAD2B6D8375008D77C1 /* StarWarsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -78,6 +80,10 @@
 		81AC3AEB2B71A995008D77C1 /* PeopleRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRepositoryTests.swift; sourceTree = "<group>"; };
 		81AC3AEE2B71AB61008D77C1 /* PeopleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRequest.swift; sourceTree = "<group>"; };
 		81AC3AF12B71C55B008D77C1 /* PeopleServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleServiceTests.swift; sourceTree = "<group>"; };
+		81AC3AF32B71CA73008D77C1 /* PeopleDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDataManager.swift; sourceTree = "<group>"; };
+		81AC3AF72B71CB04008D77C1 /* PeopleViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModelTests.swift; sourceTree = "<group>"; };
+		81AC3AFB2B71D3AD008D77C1 /* PeopleRepositoryMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRepositoryMocks.swift; sourceTree = "<group>"; };
+		81AC3AFD2B71D3DE008D77C1 /* ServiceMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMocks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,8 +155,9 @@
 		81AC3AA02B6D8375008D77C1 /* StarWarsTests */ = {
 			isa = PBXGroup;
 			children = (
-				81AC3AE92B71A95E008D77C1 /* Network */,
-				81AC3AA12B6D8375008D77C1 /* StarWarsTests.swift */,
+				81AC3AF92B71D385008D77C1 /* TestMocks */,
+				81AC3AF52B71CACB008D77C1 /* Feature */,
+				81AC3AE92B71A95E008D77C1 /* NetworkTests */,
 			);
 			path = StarWarsTests;
 			sourceTree = "<group>";
@@ -240,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				81AC3ACB2B6D8C40008D77C1 /* PeopleRepository.swift */,
+				81AC3AF32B71CA73008D77C1 /* PeopleDataManager.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -329,13 +337,13 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		81AC3AE92B71A95E008D77C1 /* Network */ = {
+		81AC3AE92B71A95E008D77C1 /* NetworkTests */ = {
 			isa = PBXGroup;
 			children = (
-				81AC3AF02B71C544008D77C1 /* Services */,
+				81AC3AF02B71C544008D77C1 /* ServicesTests */,
 				81AC3AEA2B71A968008D77C1 /* Repositories */,
 			);
-			path = Network;
+			path = NetworkTests;
 			sourceTree = "<group>";
 		};
 		81AC3AEA2B71A968008D77C1 /* Repositories */ = {
@@ -354,12 +362,45 @@
 			path = Requests;
 			sourceTree = "<group>";
 		};
-		81AC3AF02B71C544008D77C1 /* Services */ = {
+		81AC3AF02B71C544008D77C1 /* ServicesTests */ = {
 			isa = PBXGroup;
 			children = (
 				81AC3AF12B71C55B008D77C1 /* PeopleServiceTests.swift */,
 			);
-			path = Services;
+			path = ServicesTests;
+			sourceTree = "<group>";
+		};
+		81AC3AF52B71CACB008D77C1 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3AF62B71CAE7008D77C1 /* PeopleTests */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		81AC3AF62B71CAE7008D77C1 /* PeopleTests */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3AF72B71CB04008D77C1 /* PeopleViewModelTests.swift */,
+			);
+			path = PeopleTests;
+			sourceTree = "<group>";
+		};
+		81AC3AF92B71D385008D77C1 /* TestMocks */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3AFA2B71D38E008D77C1 /* NetworkMocks */,
+			);
+			path = TestMocks;
+			sourceTree = "<group>";
+		};
+		81AC3AFA2B71D38E008D77C1 /* NetworkMocks */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3AFB2B71D3AD008D77C1 /* PeopleRepositoryMocks.swift */,
+				81AC3AFD2B71D3DE008D77C1 /* ServiceMocks.swift */,
+			);
+			path = NetworkMocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -508,6 +549,7 @@
 				81AC3ABE2B6D84AB008D77C1 /* APIError.swift in Sources */,
 				81AC3AD82B70555C008D77C1 /* PeopleListViewModel.swift in Sources */,
 				81AC3AC52B6D887B008D77C1 /* PeopleEndpoint.swift in Sources */,
+				81AC3AF42B71CA73008D77C1 /* PeopleDataManager.swift in Sources */,
 				81AC3AD22B6EE66D008D77C1 /* PeopleService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,8 +558,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81AC3AFC2B71D3AD008D77C1 /* PeopleRepositoryMocks.swift in Sources */,
+				81AC3AFE2B71D3DE008D77C1 /* ServiceMocks.swift in Sources */,
 				81AC3AEC2B71A995008D77C1 /* PeopleRepositoryTests.swift in Sources */,
-				81AC3AA22B6D8375008D77C1 /* StarWarsTests.swift in Sources */,
+				81AC3AF82B71CB04008D77C1 /* PeopleViewModelTests.swift in Sources */,
 				81AC3AF22B71C55B008D77C1 /* PeopleServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
