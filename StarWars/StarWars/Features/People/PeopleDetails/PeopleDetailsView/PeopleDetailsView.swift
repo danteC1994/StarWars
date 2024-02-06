@@ -15,33 +15,40 @@ struct PeopleDetailsView: View {
             VStack {
                 AvatarView(avatarModel: .init(imageName: "starWars", title: viewModel.people.name), contentView: avatarDescription(people: viewModel.people))
                     .padding()
-                Text("\(viewModel.people.name) Starships:")
-                    .foregroundColor(.black)
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .frame(alignment: .leading)
-                ScrollView(.horizontal) {
-                    LazyHStack(spacing: 24) {
-                        ForEach(viewModel.starships) { starShip in
-                            AvatarView(
-                                avatarModel: .init(
-                                    imageName: "starWarsSpaceShip",
-                                    title: starShip.name ?? ""
-                                ),
-                                contentView: avatarStarshipDescription(starship: starShip)
-                            )
-                            .frame(width: 300)
+                if viewModel.isStarshipLoading {
+                    ProgressView()
+                } else {
+                    Text("\(viewModel.people.name) Starships:")
+                        .foregroundColor(.black)
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .frame(alignment: .leading)
+                    ScrollView(.horizontal) {
+                        LazyHStack(spacing: 24) {
+                            ForEach(viewModel.starships) { starShip in
+                                AvatarView(
+                                    avatarModel: .init(
+                                        imageName: "starWarsSpaceShip",
+                                        title: starShip.name ?? ""
+                                    ),
+                                    contentView: avatarStarshipDescription(starship: starShip)
+                                )
+                                .frame(width: 300)
+                                .onAppear{
+                                    if starShip == viewModel.starships.last {
+                                        Task {
+                                            await viewModel.getStarship()
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
+                    .padding()
                 }
-                .padding()
             }
         }
-//        .onAppear {
-//            Task {
-//                await viewModel.getStarship()
-//            }
-//        }
+        .scrollIndicators(.hidden)
     }
 
     private func avatarDescription(people: People) -> some View {

@@ -335,18 +335,18 @@
 		81AC3AE12B71A75C008D77C1 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				81AC3AE22B71A765008D77C1 /* People */,
+				81AC3AE22B71A765008D77C1 /* PeoplePreviewMocks */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
 		};
-		81AC3AE22B71A765008D77C1 /* People */ = {
+		81AC3AE22B71A765008D77C1 /* PeoplePreviewMocks */ = {
 			isa = PBXGroup;
 			children = (
 				81AC3AE62B71A852008D77C1 /* Service */,
 				81AC3AE32B71A772008D77C1 /* Models */,
 			);
-			path = People;
+			path = PeoplePreviewMocks;
 			sourceTree = "<group>";
 		};
 		81AC3AE32B71A772008D77C1 /* Models */ = {

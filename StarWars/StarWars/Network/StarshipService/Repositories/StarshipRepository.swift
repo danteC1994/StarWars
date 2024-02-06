@@ -7,7 +7,7 @@
 
 import Foundation
 
-actor StarshipRepository: StarshipDataManager {
+class StarshipRepository: StarshipDataManager {
     private let starshipService: StarshipFetchable
 
     private(set) var page: String = ""
