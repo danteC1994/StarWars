@@ -49,6 +49,7 @@
 		81AC3B242B71FB4B008D77C1 /* StarshipRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3B232B71FB4B008D77C1 /* StarshipRepository.swift */; };
 		81AC3B262B725B9B008D77C1 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3B252B725B9B008D77C1 /* AvatarView.swift */; };
 		81AC3B2A2B725C52008D77C1 /* AvatarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3B292B725C52008D77C1 /* AvatarModel.swift */; };
+		81AC3B2D2B725FC3008D77C1 /* HorizontalRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3B2C2B725FC3008D77C1 /* HorizontalRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,7 @@
 		81AC3B232B71FB4B008D77C1 /* StarshipRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipRepository.swift; sourceTree = "<group>"; };
 		81AC3B252B725B9B008D77C1 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		81AC3B292B725C52008D77C1 /* AvatarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarModel.swift; sourceTree = "<group>"; };
+		81AC3B2C2B725FC3008D77C1 /* HorizontalRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -547,6 +549,7 @@
 		81AC3B272B725C26008D77C1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				81AC3B2B2B725FA9008D77C1 /* Views */,
 				81AC3B282B725C2F008D77C1 /* ViewDataModel */,
 			);
 			path = Shared;
@@ -558,6 +561,14 @@
 				81AC3B292B725C52008D77C1 /* AvatarModel.swift */,
 			);
 			path = ViewDataModel;
+			sourceTree = "<group>";
+		};
+		81AC3B2B2B725FA9008D77C1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3B2C2B725FC3008D77C1 /* HorizontalRow.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -722,6 +733,7 @@
 				81AC3AD22B6EE66D008D77C1 /* PeopleService.swift in Sources */,
 				81AC3B032B71DDFC008D77C1 /* AsyncSession.swift in Sources */,
 				81AC3B1D2B71F87D008D77C1 /* StarshipList.swift in Sources */,
+				81AC3B2D2B725FC3008D77C1 /* HorizontalRow.swift in Sources */,
 				81AC3B1F2B71FA87008D77C1 /* StarshipService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

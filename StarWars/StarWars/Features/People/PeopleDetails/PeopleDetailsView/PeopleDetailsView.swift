@@ -53,138 +53,68 @@ struct PeopleDetailsView: View {
 
     private func avatarDescription(people: People) -> some View {
         VStack(spacing: 16) {
-            HStack {
-                Text("Mass: ")
-                    .foregroundColor(.black)
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .frame(alignment: .leading)
-                Text(people.mass)
-                    .foregroundColor(.black)
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-            }
-            HStack {
-                Text("Gender: ")
-                    .foregroundColor(.black)
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .frame(alignment: .leading)
-                Text(people.gender)
-                    .foregroundColor(.black)
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-            }
-            HStack {
-                Text("Height: ")
-                    .foregroundColor(.black)
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .frame(alignment: .leading)
-                Text(people.height)
-                    .foregroundColor(.black)
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-            }
-            HStack {
-                Text("Starships: ")
-                    .foregroundColor(.black)
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .frame(alignment: .leading)
-                Text("\(people.starships.count)")
-                    .foregroundColor(.black)
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-            }
-            HStack {
-                Text("Vehicles: ")
-                    .foregroundColor(.black)
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .frame(alignment: .leading)
-                Text("\(people.vehicles.count)")
-                    .foregroundColor(.black)
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-            }
+            HorizontalRow(
+                title: "Mass: ",
+                description: people.mass,
+                font: .title
+            )
+            HorizontalRow(
+                title: "Gender: ",
+                description: people.gender,
+                font: .title
+            )
+            HorizontalRow(
+                title: "Height: ",
+                description: people.height,
+                font: .title
+            )
+            HorizontalRow(
+                title: "Starships: ",
+                description: "\(people.starships.count)",
+                font: .title
+            )
+            HorizontalRow(
+                title: "Vehicles: ",
+                description: "\(people.vehicles.count)",
+                font: .title
+            )
         }
     }
 
     private func avatarStarshipDescription(starship: Starship) -> some View {
         VStack(spacing: 8) {
             if let model = starship.model {
-                HStack {
-                    Text("Model: ")
-                        .foregroundColor(.black)
-                        .font(.body)
-                        .fontWeight(.bold)
-                        .frame(alignment: .leading)
-                    Text(model)
-                        .foregroundColor(.black)
-                        .font(.body)
-                        .fontWeight(.bold)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
+                HorizontalRow(
+                    title: "Model: ",
+                    description: model,
+                    font: .body
+                )
             }
-            HStack {
-                Text("Passengers: ")
-                    .foregroundColor(.black)
-                    .font(.body)
-                    .fontWeight(.bold)
-                    .frame(alignment: .leading)
-                Text(starship.passengers)
-                    .foregroundColor(.black)
-                    .font(.body)
-                    .fontWeight(.bold)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-            }
+            HorizontalRow(
+                title: "Passengers: ",
+                description: starship.passengers,
+                font: .body
+            )
             if let length = starship.length {
-                HStack {
-                    Text("Length: ")
-                        .foregroundColor(.black)
-                        .font(.body)
-                        .fontWeight(.bold)
-                        .frame(alignment: .leading)
-                    Text(length)
-                        .foregroundColor(.black)
-                        .font(.body)
-                        .fontWeight(.bold)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
+                HorizontalRow(
+                    title: "Length: ",
+                    description: length,
+                    font: .body
+                )
             }
             if let manufacturer = starship.manufacturer {
-                HStack {
-                    Text("Manufacturer: ")
-                        .foregroundColor(.black)
-                        .font(.body)
-                        .fontWeight(.bold)
-                        .frame(alignment: .leading)
-                    Text(manufacturer)
-                        .foregroundColor(.black)
-                        .font(.body)
-                        .fontWeight(.bold)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
+                HorizontalRow(
+                    title: "Manufacturer: ",
+                    description: manufacturer,
+                    font: .body
+                )
             }
             if let crew = starship.crew {
-                HStack {
-                    Text("Crew: ")
-                        .foregroundColor(.black)
-                        .font(.body)
-                        .fontWeight(.bold)
-                        .frame(alignment: .leading)
-                    Text(crew)
-                        .foregroundColor(.black)
-                        .font(.body)
-                        .fontWeight(.bold)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
+                HorizontalRow(
+                    title: "Crew: ",
+                    description: crew,
+                    font: .body
+                )
             }
         }
     }
