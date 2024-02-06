@@ -35,7 +35,7 @@ struct PeopleDetailsView: View {
                                 )
                                 .frame(width: 300)
                                 .onAppear{
-                                    if starShip == viewModel.starships.last {
+                                    if starShip == viewModel.starships.last, !viewModel.isStarshipLoading {
                                         Task {
                                             await viewModel.getStarship()
                                         }

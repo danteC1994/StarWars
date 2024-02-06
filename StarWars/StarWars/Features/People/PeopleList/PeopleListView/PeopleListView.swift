@@ -30,7 +30,7 @@ struct PeopleListView: View {
                                             navigate = true
                                         }
                                         .onAppear {
-                                            if people == viewModel.people.last {
+                                            if people == viewModel.people.last, !viewModel.isPeopleLoading {
                                                 Task {
                                                     await viewModel.getPeople()
                                                 }
