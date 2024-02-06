@@ -10,8 +10,11 @@ import SwiftUI
 struct PeopleListView: View {
     @ObservedObject var viewModel: PeopleListViewModel
 
+    @State var navigate: Bool = false
+    @State var selectedPeople: People?
+
     var body: some View {
-        NavigationView {
+        NavigationStack {
                 ZStack {
                     Color.secondary
                         .ignoresSafeArea()
@@ -22,6 +25,11 @@ struct PeopleListView: View {
                             LazyVStack {
                                 ForEach(viewModel.people) { people in
                                     PeopleListRow(people: people)
+//                                        .buttonStyle(.plain)
+                                        .onTapGesture {
+                                            selectedPeople = people
+                                            navigate = true
+                                        }
                                         .onAppear {
                                             if people == viewModel.people.last {
                                                 Task {
@@ -29,11 +37,17 @@ struct PeopleListView: View {
                                                 }
                                             }
                                         }
+
                                 }
                             }
                         }
                     }
             }
+                .navigationDestination(
+                     isPresented: $navigate
+                ) {
+                    PeopleFactory.createPeopleDetails()
+                }
         }
         .onAppear {
             Task {
@@ -48,6 +62,6 @@ struct PeopleListView: View {
 
 struct PeopleListView_Previews: PreviewProvider {
     static var previews: some View {
-        PeopleListFactory.createPeopleList()
+        PeopleFactory.createPeopleList()
     }
 }

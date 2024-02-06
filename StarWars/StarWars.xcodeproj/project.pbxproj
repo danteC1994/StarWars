@@ -22,7 +22,7 @@
 		81AC3AD22B6EE66D008D77C1 /* PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AD12B6EE66D008D77C1 /* PeopleService.swift */; };
 		81AC3AD82B70555C008D77C1 /* PeopleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AD72B70555C008D77C1 /* PeopleListViewModel.swift */; };
 		81AC3ADA2B705571008D77C1 /* PeopleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AD92B705571008D77C1 /* PeopleListView.swift */; };
-		81AC3ADC2B705581008D77C1 /* PeopleListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3ADB2B705581008D77C1 /* PeopleListFactory.swift */; };
+		81AC3ADC2B705581008D77C1 /* PeopleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3ADB2B705581008D77C1 /* PeopleFactory.swift */; };
 		81AC3ADE2B705E63008D77C1 /* PeopleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3ADD2B705E63008D77C1 /* PeopleList.swift */; };
 		81AC3AE02B706D60008D77C1 /* PeopleListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3ADF2B706D60008D77C1 /* PeopleListRow.swift */; };
 		81AC3AE52B71A784008D77C1 /* PeopleModelMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AE42B71A784008D77C1 /* PeopleModelMocks.swift */; };
@@ -34,6 +34,11 @@
 		81AC3AF82B71CB04008D77C1 /* PeopleViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AF72B71CB04008D77C1 /* PeopleViewModelTests.swift */; };
 		81AC3AFC2B71D3AD008D77C1 /* PeopleRepositoryMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AFB2B71D3AD008D77C1 /* PeopleRepositoryMocks.swift */; };
 		81AC3AFE2B71D3DE008D77C1 /* ServiceMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AFD2B71D3DE008D77C1 /* ServiceMocks.swift */; };
+		81AC3B012B71DDA6008D77C1 /* GenericDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3B002B71DDA6008D77C1 /* GenericDecoder.swift */; };
+		81AC3B032B71DDFC008D77C1 /* AsyncSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3B022B71DDFC008D77C1 /* AsyncSession.swift */; };
+		81AC3B052B71DE25008D77C1 /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3B042B71DE25008D77C1 /* URLSession+Extensions.swift */; };
+		81AC3B0C2B71E1D1008D77C1 /* PeopleDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3B0B2B71E1D1008D77C1 /* PeopleDetailsView.swift */; };
+		81AC3B0E2B71E1DB008D77C1 /* PeopleDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3B0D2B71E1DB008D77C1 /* PeopleDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +77,7 @@
 		81AC3AD12B6EE66D008D77C1 /* PeopleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleService.swift; sourceTree = "<group>"; };
 		81AC3AD72B70555C008D77C1 /* PeopleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListViewModel.swift; sourceTree = "<group>"; };
 		81AC3AD92B705571008D77C1 /* PeopleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListView.swift; sourceTree = "<group>"; };
-		81AC3ADB2B705581008D77C1 /* PeopleListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListFactory.swift; sourceTree = "<group>"; };
+		81AC3ADB2B705581008D77C1 /* PeopleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFactory.swift; sourceTree = "<group>"; };
 		81AC3ADD2B705E63008D77C1 /* PeopleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleList.swift; sourceTree = "<group>"; };
 		81AC3ADF2B706D60008D77C1 /* PeopleListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListRow.swift; sourceTree = "<group>"; };
 		81AC3AE42B71A784008D77C1 /* PeopleModelMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleModelMocks.swift; sourceTree = "<group>"; };
@@ -84,6 +89,11 @@
 		81AC3AF72B71CB04008D77C1 /* PeopleViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModelTests.swift; sourceTree = "<group>"; };
 		81AC3AFB2B71D3AD008D77C1 /* PeopleRepositoryMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRepositoryMocks.swift; sourceTree = "<group>"; };
 		81AC3AFD2B71D3DE008D77C1 /* ServiceMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMocks.swift; sourceTree = "<group>"; };
+		81AC3B002B71DDA6008D77C1 /* GenericDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDecoder.swift; sourceTree = "<group>"; };
+		81AC3B022B71DDFC008D77C1 /* AsyncSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncSession.swift; sourceTree = "<group>"; };
+		81AC3B042B71DE25008D77C1 /* URLSession+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
+		81AC3B0B2B71E1D1008D77C1 /* PeopleDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailsView.swift; sourceTree = "<group>"; };
+		81AC3B0D2B71E1DB008D77C1 /* PeopleDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +144,7 @@
 		81AC3A8F2B6D8371008D77C1 /* StarWars */ = {
 			isa = PBXGroup;
 			children = (
-				81AC3AE12B71A75C008D77C1 /* Mocks */,
+				81AC3B062B71DE4D008D77C1 /* Utils */,
 				81AC3ABA2B6D840C008D77C1 /* App */,
 				81AC3AC12B6D882A008D77C1 /* Features */,
 				81AC3ABC2B6D8491008D77C1 /* Network */,
@@ -202,7 +212,7 @@
 		81AC3AC12B6D882A008D77C1 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				81AC3AD32B705519008D77C1 /* People */,
+				81AC3B0A2B71E1BB008D77C1 /* People */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -227,6 +237,7 @@
 		81AC3AC62B6D88C1008D77C1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				81AC3AFF2B71DD98008D77C1 /* Shared */,
 				81AC3AED2B71AB52008D77C1 /* Requests */,
 				81AC3ACA2B6D8C27008D77C1 /* Repositories */,
 				81AC3AC72B6D88DE008D77C1 /* PeopleService */,
@@ -269,20 +280,19 @@
 			path = People;
 			sourceTree = "<group>";
 		};
-		81AC3AD32B705519008D77C1 /* People */ = {
+		81AC3AD32B705519008D77C1 /* PeopleList */ = {
 			isa = PBXGroup;
 			children = (
 				81AC3AD62B70553C008D77C1 /* PeopleListViewModel */,
 				81AC3AD52B705532008D77C1 /* PeopleListView */,
-				81AC3AD42B70552A008D77C1 /* PeopleFactory */,
 			);
-			path = People;
+			path = PeopleList;
 			sourceTree = "<group>";
 		};
 		81AC3AD42B70552A008D77C1 /* PeopleFactory */ = {
 			isa = PBXGroup;
 			children = (
-				81AC3ADB2B705581008D77C1 /* PeopleListFactory.swift */,
+				81AC3ADB2B705581008D77C1 /* PeopleFactory.swift */,
 			);
 			path = PeopleFactory;
 			sourceTree = "<group>";
@@ -401,6 +411,59 @@
 				81AC3AFD2B71D3DE008D77C1 /* ServiceMocks.swift */,
 			);
 			path = NetworkMocks;
+			sourceTree = "<group>";
+		};
+		81AC3AFF2B71DD98008D77C1 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3B002B71DDA6008D77C1 /* GenericDecoder.swift */,
+				81AC3B022B71DDFC008D77C1 /* AsyncSession.swift */,
+				81AC3B042B71DE25008D77C1 /* URLSession+Extensions.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		81AC3B062B71DE4D008D77C1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3AE12B71A75C008D77C1 /* Mocks */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		81AC3B072B71E188008D77C1 /* PeopleDetails */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3B092B71E19E008D77C1 /* PeopleDetailsView */,
+				81AC3B082B71E190008D77C1 /* PeopleDetailsViewModel */,
+			);
+			path = PeopleDetails;
+			sourceTree = "<group>";
+		};
+		81AC3B082B71E190008D77C1 /* PeopleDetailsViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3B0D2B71E1DB008D77C1 /* PeopleDetailsViewModel.swift */,
+			);
+			path = PeopleDetailsViewModel;
+			sourceTree = "<group>";
+		};
+		81AC3B092B71E19E008D77C1 /* PeopleDetailsView */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3B0B2B71E1D1008D77C1 /* PeopleDetailsView.swift */,
+			);
+			path = PeopleDetailsView;
+			sourceTree = "<group>";
+		};
+		81AC3B0A2B71E1BB008D77C1 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3AD32B705519008D77C1 /* PeopleList */,
+				81AC3B072B71E188008D77C1 /* PeopleDetails */,
+				81AC3AD42B70552A008D77C1 /* PeopleFactory */,
+			);
+			path = People;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -538,19 +601,24 @@
 				81AC3AE82B71A869008D77C1 /* PeopleServiceMock.swift in Sources */,
 				81AC3ADA2B705571008D77C1 /* PeopleListView.swift in Sources */,
 				81AC3A912B6D8371008D77C1 /* StarWarsApp.swift in Sources */,
+				81AC3B052B71DE25008D77C1 /* URLSession+Extensions.swift in Sources */,
 				81AC3AEF2B71AB61008D77C1 /* PeopleRequest.swift in Sources */,
 				81AC3AC92B6D88FE008D77C1 /* PeopleFetchable.swift in Sources */,
+				81AC3B0C2B71E1D1008D77C1 /* PeopleDetailsView.swift in Sources */,
 				81AC3AD02B6EE3A6008D77C1 /* People.swift in Sources */,
 				81AC3ACC2B6D8C40008D77C1 /* PeopleRepository.swift in Sources */,
 				81AC3ADE2B705E63008D77C1 /* PeopleList.swift in Sources */,
 				81AC3AE52B71A784008D77C1 /* PeopleModelMocks.swift in Sources */,
-				81AC3ADC2B705581008D77C1 /* PeopleListFactory.swift in Sources */,
+				81AC3B0E2B71E1DB008D77C1 /* PeopleDetailsViewModel.swift in Sources */,
+				81AC3ADC2B705581008D77C1 /* PeopleFactory.swift in Sources */,
 				81AC3AE02B706D60008D77C1 /* PeopleListRow.swift in Sources */,
 				81AC3ABE2B6D84AB008D77C1 /* APIError.swift in Sources */,
+				81AC3B012B71DDA6008D77C1 /* GenericDecoder.swift in Sources */,
 				81AC3AD82B70555C008D77C1 /* PeopleListViewModel.swift in Sources */,
 				81AC3AC52B6D887B008D77C1 /* PeopleEndpoint.swift in Sources */,
 				81AC3AF42B71CA73008D77C1 /* PeopleDataManager.swift in Sources */,
 				81AC3AD22B6EE66D008D77C1 /* PeopleService.swift in Sources */,
+				81AC3B032B71DDFC008D77C1 /* AsyncSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

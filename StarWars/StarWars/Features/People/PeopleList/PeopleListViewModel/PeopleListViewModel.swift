@@ -18,7 +18,6 @@ class PeopleListViewModel: ObservableObject {
 
     @MainActor
     func getPeople() async {
-        print("called!!!!!!!!!!")
         isPeopleLoading = true
         defer { isPeopleLoading = false }
         let result = people.count == 0 ? await peopleRepository.requestPeople() : await peopleRepository.requestPeopleNextPage()

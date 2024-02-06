@@ -7,14 +7,9 @@
 
 import Foundation
 
-protocol AsyncSession {
-    func data(from url: URL, delegate: URLSessionTaskDelegate?) async throws -> (Data, URLResponse)
-}
-
-extension URLSession: AsyncSession {}
-
-struct PeopleService<T>: PeopleFetchable where T: AsyncSession {
-    let session: T
+struct PeopleService<Session>: PeopleFetchable where Session: AsyncSession {
+    let session: Session
+    let decoder: StarWarsDecodable
 
     func requestPeople(request: PeopleRequest) async -> Result<PeopleList, APIError> {
         guard let url = PeopleEndpoint(queryItems: request.queryItems()).getUrlRequest()
@@ -27,11 +22,7 @@ struct PeopleService<T>: PeopleFetchable where T: AsyncSession {
         } catch {
             return .failure(APIError.network("\(error)"))
         }
-        do {
-            let people = try JSONDecoder().decode(PeopleList.self, from: peopleData)
-            return .success(people)
-        } catch {
-            return .failure(APIError.decoding("\(error)"))
-        }
+        
+        return decoder.decode(PeopleList.self, from: peopleData)
     }
 }

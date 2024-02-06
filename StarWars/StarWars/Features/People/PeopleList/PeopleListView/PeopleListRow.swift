@@ -37,6 +37,8 @@ struct PeopleListRow: View {
             }
             .padding(.leading)
         }
+        .contentShape(Rectangle())
+        .frame(maxWidth: .infinity)
         .aspectRatio(1.0, contentMode: .fit)
         .cornerRadius(8)
         .listRowInsets(.init(top: 8, leading: 8, bottom: 8, trailing: 8))
@@ -50,24 +52,7 @@ struct PeopleListRow_Previews: PreviewProvider {
             ScrollView {
                 LazyVStack {
                     PeopleListRow(
-                        people: .init(
-                            birthYear: nil,
-                            eyeColor: nil,
-                            films: [],
-                            gender: "male",
-                            hairColor: "blond",
-                            height: "188",
-                            homeworld: "https://swapi.dev/api/planets/1/",
-                            mass: "84",
-                            name: "Anakin Skywalker",
-                            skinColor: "fair",
-                            created: "2014-12-10T16:20:44.310000Z",
-                            edited: nil,
-                            species: [],
-                            starships: [],
-                            url: "https://swapi.dev/api/people/11/",
-                            vehicles: []
-                        )
+                        people: PeopleModelMocks.getPeople()
                     )
                 }
             }
