@@ -6,6 +6,7 @@
 //
 
 import Combine
+import Foundation
 
 protocol PeopleFetchable {
     func requestPeople(request: PeopleRequest) async -> Result<PeopleList, APIError>

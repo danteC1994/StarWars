@@ -8,9 +8,10 @@
 import Foundation
 
 actor PeopleRepository {
-    private var page: String = ""
     private let peopleService: PeopleFetchable
-    private var peopleFetched = [People]()
+
+    private(set) var page: String = ""
+    private(set) var peopleFetched = [People]()
     
     init(peopleService: PeopleFetchable) {
         self.peopleService = peopleService
@@ -53,18 +54,5 @@ actor PeopleRepository {
         if let newPage = queryItems.map({ $0.first{ $0.name == "page" }?.value }) {
             page = newPage ?? page
         }
-    }
-}
-
-struct PeopleRequest {
-    let page: String?
-
-    init(page: String? = nil) {
-        self.page = page
-    }
-
-    func queryItems() -> [URLQueryItem] {
-        guard let page else { return [] }
-        return [URLQueryItem(name: "page", value: page)]
     }
 }

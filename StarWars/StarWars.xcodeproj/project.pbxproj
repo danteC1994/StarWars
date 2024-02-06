@@ -28,6 +28,9 @@
 		81AC3AE02B706D60008D77C1 /* PeopleListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3ADF2B706D60008D77C1 /* PeopleListRow.swift */; };
 		81AC3AE52B71A784008D77C1 /* PeopleModelMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AE42B71A784008D77C1 /* PeopleModelMocks.swift */; };
 		81AC3AE82B71A869008D77C1 /* PeopleServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AE72B71A869008D77C1 /* PeopleServiceMock.swift */; };
+		81AC3AEC2B71A995008D77C1 /* PeopleRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AEB2B71A995008D77C1 /* PeopleRepositoryTests.swift */; };
+		81AC3AEF2B71AB61008D77C1 /* PeopleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AEE2B71AB61008D77C1 /* PeopleRequest.swift */; };
+		81AC3AF22B71C55B008D77C1 /* PeopleServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3AF12B71C55B008D77C1 /* PeopleServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,9 @@
 		81AC3ADF2B706D60008D77C1 /* PeopleListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListRow.swift; sourceTree = "<group>"; };
 		81AC3AE42B71A784008D77C1 /* PeopleModelMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleModelMocks.swift; sourceTree = "<group>"; };
 		81AC3AE72B71A869008D77C1 /* PeopleServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleServiceMock.swift; sourceTree = "<group>"; };
+		81AC3AEB2B71A995008D77C1 /* PeopleRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRepositoryTests.swift; sourceTree = "<group>"; };
+		81AC3AEE2B71AB61008D77C1 /* PeopleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRequest.swift; sourceTree = "<group>"; };
+		81AC3AF12B71C55B008D77C1 /* PeopleServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,7 @@
 		81AC3AA02B6D8375008D77C1 /* StarWarsTests */ = {
 			isa = PBXGroup;
 			children = (
+				81AC3AE92B71A95E008D77C1 /* Network */,
 				81AC3AA12B6D8375008D77C1 /* StarWarsTests.swift */,
 			);
 			path = StarWarsTests;
@@ -213,6 +220,7 @@
 		81AC3AC62B6D88C1008D77C1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				81AC3AED2B71AB52008D77C1 /* Requests */,
 				81AC3ACA2B6D8C27008D77C1 /* Repositories */,
 				81AC3AC72B6D88DE008D77C1 /* PeopleService */,
 			);
@@ -319,6 +327,39 @@
 				81AC3AE72B71A869008D77C1 /* PeopleServiceMock.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		81AC3AE92B71A95E008D77C1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3AF02B71C544008D77C1 /* Services */,
+				81AC3AEA2B71A968008D77C1 /* Repositories */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		81AC3AEA2B71A968008D77C1 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3AEB2B71A995008D77C1 /* PeopleRepositoryTests.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		81AC3AED2B71AB52008D77C1 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3AEE2B71AB61008D77C1 /* PeopleRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		81AC3AF02B71C544008D77C1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3AF12B71C55B008D77C1 /* PeopleServiceTests.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,6 +497,7 @@
 				81AC3AE82B71A869008D77C1 /* PeopleServiceMock.swift in Sources */,
 				81AC3ADA2B705571008D77C1 /* PeopleListView.swift in Sources */,
 				81AC3A912B6D8371008D77C1 /* StarWarsApp.swift in Sources */,
+				81AC3AEF2B71AB61008D77C1 /* PeopleRequest.swift in Sources */,
 				81AC3AC92B6D88FE008D77C1 /* PeopleFetchable.swift in Sources */,
 				81AC3AD02B6EE3A6008D77C1 /* People.swift in Sources */,
 				81AC3ACC2B6D8C40008D77C1 /* PeopleRepository.swift in Sources */,
@@ -474,7 +516,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81AC3AEC2B71A995008D77C1 /* PeopleRepositoryTests.swift in Sources */,
 				81AC3AA22B6D8375008D77C1 /* StarWarsTests.swift in Sources */,
+				81AC3AF22B71C55B008D77C1 /* PeopleServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

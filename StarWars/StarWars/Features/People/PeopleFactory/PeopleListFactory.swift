@@ -9,7 +9,7 @@ import Foundation
 
 struct PeopleListFactory {
     static func createPeopleList() -> PeopleListView {
-        let peopleService = PeopleService()
+        let peopleService = PeopleService(session: URLSession.shared)
         let peopleRepository = PeopleRepository(peopleService: peopleService)
         let viewModel = PeopleListViewModel(peopleRepository: peopleRepository)
         return PeopleListView(viewModel: viewModel)
