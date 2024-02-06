@@ -14,7 +14,24 @@ struct PeopleListView: View {
     @State var selectedPeople: People = .init()
 
     var body: some View {
-        NavigationStack {
+        if viewModel.showeErrorState {
+            GeometryReader { geo in
+                VStack {
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        GenericErrorView(errorDescription: viewModel.errorDescription)
+                            .frame(width: geo.size.width * 0.75, height: geo.size.height * 0.75)
+                            .refreshable {
+                                await viewModel.refresh()
+                            }
+                        Spacer()
+                    }
+                    Spacer()
+                }
+            }
+        } else {
+            NavigationStack {
                 ZStack {
                     Color.secondary
                         .ignoresSafeArea()
@@ -36,25 +53,26 @@ struct PeopleListView: View {
                                                 }
                                             }
                                         }
-
+                                    
                                 }
                             }
                         }
                     }
-            }
+                }
                 .navigationDestination(
-                     isPresented: $navigate
+                    isPresented: $navigate
                 ) {
                     PeopleFactory.createPeopleDetails(people: selectedPeople)
                 }
-        }
-        .onAppear {
-            Task {
-                await viewModel.getPeople()
             }
-        }
-        .refreshable {
-            await viewModel.getPeople()
+            .onAppear {
+                Task {
+                    await viewModel.getPeople()
+                }
+            }
+            .refreshable {
+                await viewModel.refresh()
+            }
         }
     }
 }
@@ -62,5 +80,7 @@ struct PeopleListView: View {
 struct PeopleListView_Previews: PreviewProvider {
     static var previews: some View {
         PeopleFactory.createPeopleListMock()
+        // To see error view:
+        // PeopleFactory.createPeopleListMock()
     }
 }

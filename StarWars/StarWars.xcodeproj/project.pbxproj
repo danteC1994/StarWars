@@ -50,6 +50,9 @@
 		81AC3B262B725B9B008D77C1 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3B252B725B9B008D77C1 /* AvatarView.swift */; };
 		81AC3B2A2B725C52008D77C1 /* AvatarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3B292B725C52008D77C1 /* AvatarModel.swift */; };
 		81AC3B2D2B725FC3008D77C1 /* HorizontalRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3B2C2B725FC3008D77C1 /* HorizontalRow.swift */; };
+		81AC3B302B728D8F008D77C1 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3B2F2B728D8F008D77C1 /* People.swift */; };
+		81AC3B332B728FE5008D77C1 /* GenericDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3B322B728FE5008D77C1 /* GenericDecoderTests.swift */; };
+		81AC3B352B729069008D77C1 /* GenericErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC3B342B729069008D77C1 /* GenericErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +119,9 @@
 		81AC3B252B725B9B008D77C1 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		81AC3B292B725C52008D77C1 /* AvatarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarModel.swift; sourceTree = "<group>"; };
 		81AC3B2C2B725FC3008D77C1 /* HorizontalRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalRow.swift; sourceTree = "<group>"; };
+		81AC3B2F2B728D8F008D77C1 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		81AC3B322B728FE5008D77C1 /* GenericDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDecoderTests.swift; sourceTree = "<group>"; };
+		81AC3B342B729069008D77C1 /* GenericErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +193,7 @@
 		81AC3AA02B6D8375008D77C1 /* StarWarsTests */ = {
 			isa = PBXGroup;
 			children = (
+				81AC3B312B728FD6008D77C1 /* SharedTests */,
 				81AC3AF92B71D385008D77C1 /* TestMocks */,
 				81AC3AF52B71CACB008D77C1 /* Features */,
 				81AC3AE92B71A95E008D77C1 /* NetworkTests */,
@@ -424,6 +431,7 @@
 		81AC3AF92B71D385008D77C1 /* TestMocks */ = {
 			isa = PBXGroup;
 			children = (
+				81AC3B2E2B728D24008D77C1 /* Models */,
 				81AC3AFA2B71D38E008D77C1 /* NetworkMocks */,
 			);
 			path = TestMocks;
@@ -477,7 +485,6 @@
 			isa = PBXGroup;
 			children = (
 				81AC3B0B2B71E1D1008D77C1 /* PeopleDetailsView.swift */,
-				81AC3B252B725B9B008D77C1 /* AvatarView.swift */,
 			);
 			path = PeopleDetailsView;
 			sourceTree = "<group>";
@@ -567,8 +574,26 @@
 			isa = PBXGroup;
 			children = (
 				81AC3B2C2B725FC3008D77C1 /* HorizontalRow.swift */,
+				81AC3B342B729069008D77C1 /* GenericErrorView.swift */,
+				81AC3B252B725B9B008D77C1 /* AvatarView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		81AC3B2E2B728D24008D77C1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3B2F2B728D8F008D77C1 /* People.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		81AC3B312B728FD6008D77C1 /* SharedTests */ = {
+			isa = PBXGroup;
+			children = (
+				81AC3B322B728FE5008D77C1 /* GenericDecoderTests.swift */,
+			);
+			path = SharedTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -714,6 +739,7 @@
 				81AC3B052B71DE25008D77C1 /* URLSession+Extensions.swift in Sources */,
 				81AC3AEF2B71AB61008D77C1 /* PeopleRequest.swift in Sources */,
 				81AC3B1B2B71F845008D77C1 /* Starship.swift in Sources */,
+				81AC3B352B729069008D77C1 /* GenericErrorView.swift in Sources */,
 				81AC3AC92B6D88FE008D77C1 /* PeopleFetchable.swift in Sources */,
 				81AC3B0C2B71E1D1008D77C1 /* PeopleDetailsView.swift in Sources */,
 				81AC3AD02B6EE3A6008D77C1 /* People.swift in Sources */,
@@ -746,6 +772,8 @@
 				81AC3AFE2B71D3DE008D77C1 /* ServiceMocks.swift in Sources */,
 				81AC3AEC2B71A995008D77C1 /* PeopleRepositoryTests.swift in Sources */,
 				81AC3AF82B71CB04008D77C1 /* PeopleViewModelTests.swift in Sources */,
+				81AC3B302B728D8F008D77C1 /* People.swift in Sources */,
+				81AC3B332B728FE5008D77C1 /* GenericDecoderTests.swift in Sources */,
 				81AC3AF22B71C55B008D77C1 /* PeopleServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
