@@ -13,11 +13,11 @@ class PeopleModelMocks {
             count: 2,
             next: "https://swapi.dev/api/people/?page=3",
             previous: "https://swapi.dev/api/people/?page=1",
-            results: [getPeople(), getPeople()]
+            results: .init(repeating: getPeople("\(Int.random(in: 0..<20))"), count: 10) 
         )
     }
 
-    static func getPeople() -> People {
+    static func getPeople(_ num: String = "") -> People {
     .init(
         birthYear: nil,
         eyeColor: nil,
@@ -27,7 +27,7 @@ class PeopleModelMocks {
         height: "188",
         homeworld: "https://swapi.dev/api/planets/1/",
         mass: "84",
-        name: "Anakin Skywalker",
+        name: "\(num)Anakin Skywalker",
         skinColor: "fair",
         created: "2014-12-10T16:20:44.310000Z",
         edited: nil,

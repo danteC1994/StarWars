@@ -22,7 +22,7 @@ class PeopleViewModelTests: XCTestCase {
         await sut.getPeople()
 
         XCTAssertTrue(try XCTUnwrap(peopleRepository.requestPeopleExecuted))
-        XCTAssertEqual(sut.people.count, 2)
+        XCTAssertEqual(sut.people.count, 10)
     }
 
     func testGetPeople_withNonEmptyPeopleListArray() async {
@@ -31,7 +31,7 @@ class PeopleViewModelTests: XCTestCase {
         await sut.getPeople()
 
         XCTAssertTrue(try XCTUnwrap(peopleRepository.requestPeopleNextPageExecuted))
-        XCTAssertEqual(sut.people.count, 4)
+        XCTAssertEqual(sut.people.count, 20)
     }
 
     

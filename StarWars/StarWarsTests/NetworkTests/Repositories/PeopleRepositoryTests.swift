@@ -27,7 +27,7 @@ class PeopleRepositoryTests: XCTestCase {
 
         XCTAssertNotNil(results)
         XCTAssertEqual(peopleList.results, cachedResults)
-        XCTAssertEqual(cachedResults.count, 2)
+        XCTAssertEqual(cachedResults.count, 10)
         XCTAssertEqual(page, "3")
     }
 
@@ -67,7 +67,7 @@ class PeopleRepositoryTests: XCTestCase {
 
         XCTAssertNotNil(results)
         XCTAssertEqual(peopleList.results, cachedResults)
-        XCTAssertEqual(cachedResults.count, 4)
+        XCTAssertEqual(cachedResults.count, 20)
         XCTAssertEqual(page, "3")
     }
 }

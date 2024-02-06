@@ -13,7 +13,7 @@ class PeopleServiceTests: XCTestCase {
     var sut: PeopleService<MockSession>!
 
     func testSuccessRequestPeople() async {
-        sut = PeopleService(session: MockSessionSuccess())
+        sut = PeopleService(session: MockSessionSuccess(), decoder: GenericDecoder())
 
         let result = await sut.requestPeople(request: .init(page: "3"))
 
@@ -26,7 +26,7 @@ class PeopleServiceTests: XCTestCase {
     }
 
     func testFailureRequestPeople() async {
-        sut = PeopleService(session: MockSessionFailure())
+        sut = PeopleService(session: MockSessionFailure(), decoder: GenericDecoder())
 
         let result = await sut.requestPeople(request: .init(page: "3"))
 
