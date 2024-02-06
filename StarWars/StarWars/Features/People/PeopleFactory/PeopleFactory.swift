@@ -16,7 +16,9 @@ struct PeopleFactory {
     }
 
     static func createPeopleDetails(people: People) -> PeopleDetailsView {
-        let viewModel = PeopleDetailsViewModel(people: people)
+        let starshipService = StarshipService(session: URLSession.shared, decoder: GenericDecoder())
+        let starshipRepository = StarshipRepository(starshipService: starshipService)
+        let viewModel = PeopleDetailsViewModel(people: people, starshipRepository: starshipRepository)
         return PeopleDetailsView(viewModel: viewModel)
     }
 }

@@ -11,11 +11,37 @@ struct PeopleDetailsView: View {
     @ObservedObject var viewModel: PeopleDetailsViewModel
 
     var body: some View {
-        VStack {
-            AvatarView(avatarModel: .init(imageName: "starWars", title: viewModel.people.name), contentView: avatarDescription(people: viewModel.people))
+        ScrollView {
+            VStack {
+                AvatarView(avatarModel: .init(imageName: "starWars", title: viewModel.people.name), contentView: avatarDescription(people: viewModel.people))
+                    .padding()
+                Text("\(viewModel.people.name) Starships:")
+                    .foregroundColor(.black)
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .frame(alignment: .leading)
+                ScrollView(.horizontal) {
+                    LazyHStack(spacing: 24) {
+                        ForEach(viewModel.starships) { starShip in
+                            AvatarView(
+                                avatarModel: .init(
+                                    imageName: "starWarsSpaceShip",
+                                    title: starShip.name ?? ""
+                                ),
+                                contentView: avatarStarshipDescription(starship: starShip)
+                            )
+                            .frame(width: 300)
+                        }
+                    }
+                }
                 .padding()
-            
+            }
         }
+//        .onAppear {
+//            Task {
+//                await viewModel.getStarship()
+//            }
+//        }
     }
 
     private func avatarDescription(people: People) -> some View {
@@ -79,6 +105,79 @@ struct PeopleDetailsView: View {
                     .font(.title)
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .leading)
+            }
+        }
+    }
+
+    private func avatarStarshipDescription(starship: Starship) -> some View {
+        VStack(spacing: 8) {
+            if let model = starship.model {
+                HStack {
+                    Text("Model: ")
+                        .foregroundColor(.black)
+                        .font(.body)
+                        .fontWeight(.bold)
+                        .frame(alignment: .leading)
+                    Text(model)
+                        .foregroundColor(.black)
+                        .font(.body)
+                        .fontWeight(.bold)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+            }
+            HStack {
+                Text("Passengers: ")
+                    .foregroundColor(.black)
+                    .font(.body)
+                    .fontWeight(.bold)
+                    .frame(alignment: .leading)
+                Text(starship.passengers)
+                    .foregroundColor(.black)
+                    .font(.body)
+                    .fontWeight(.bold)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            if let length = starship.length {
+                HStack {
+                    Text("Length: ")
+                        .foregroundColor(.black)
+                        .font(.body)
+                        .fontWeight(.bold)
+                        .frame(alignment: .leading)
+                    Text(length)
+                        .foregroundColor(.black)
+                        .font(.body)
+                        .fontWeight(.bold)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+            }
+            if let manufacturer = starship.manufacturer {
+                HStack {
+                    Text("Manufacturer: ")
+                        .foregroundColor(.black)
+                        .font(.body)
+                        .fontWeight(.bold)
+                        .frame(alignment: .leading)
+                    Text(manufacturer)
+                        .foregroundColor(.black)
+                        .font(.body)
+                        .fontWeight(.bold)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+            }
+            if let crew = starship.crew {
+                HStack {
+                    Text("Crew: ")
+                        .foregroundColor(.black)
+                        .font(.body)
+                        .fontWeight(.bold)
+                        .frame(alignment: .leading)
+                    Text(crew)
+                        .foregroundColor(.black)
+                        .font(.body)
+                        .fontWeight(.bold)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
             }
         }
     }
